@@ -20,6 +20,8 @@ class MainViewController: UITabBarController {
         locationVC.title = "Location"
         locationVC.tabBarItem = UITabBarItem(title: "Location", image: UIImage(systemName: "person"), tag: 1)
         
+       
+        
         self.viewControllers = [characterVC, locationVC]
         
     }
