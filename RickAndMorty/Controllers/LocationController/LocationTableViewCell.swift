@@ -9,12 +9,12 @@ import UIKit
 
 class LocationTableViewCell: UITableViewCell {
 
-  @IBOutlet weak var name: UILabel!
-  @IBOutlet weak var dimention: UILabel!
-  
+    @IBOutlet var locationName: UILabel!
+    @IBOutlet var dimention: UILabel!
+    
   override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+      locationName.text = "ASdasd"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
