@@ -1,13 +1,13 @@
 //
-//  DetailCharacterViewController.swift
+//  CharacterDetailViewController.swift
 //  RickAndMorty
 //
-//  Created by namnl on 02/04/2023.
+//  Created by namnl on 03/04/2023.
 //
 
 import UIKit
 
-class DetailCharacterViewController: UIViewController {
+class CharacterDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
