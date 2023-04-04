@@ -15,16 +15,20 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
     var page: Int = 1
     var titleController: String?
     @IBOutlet var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.delegate = self
         collectionView.dataSource = self
+        view.backgroundColor = .white
         let nib = UINib(nibName: "CharacterCollectionViewCell", bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: "cell")
         setLayout()
         getFirstCharacters()
     }
-    
+    func setUpNavBar(){
+       
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listCharacter.count
     }
@@ -53,14 +57,6 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         //    print(listCharacter[indexPath.row].toJSON())
         let item = listCharacter[indexPath.row]
         let vc = CharacterDetailViewController(item: item)
-
-//
-//        vc.characterName?.text = item.name ?? ""
-//        vc.characterStatus?.text = "\(item.status ?? "unknown") - \(item.species ??  "unknown")"
-//        vc.characterImage?.kf.setImage(with: URL(string: item.image ?? ""))
-//        vc.characterLocation?.text = item.location?.name ?? ""
-//        vc.characterFirstSeen?.text = "Earth"
-        print("push CharacterDetailViewController")
         vc.hidesBottomBarWhenPushed = true
         pushVC(controller: vc)
 
