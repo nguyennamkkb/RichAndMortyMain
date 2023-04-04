@@ -35,6 +35,8 @@
 		0BF2104729D837B40085F0FE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2104529D837B40085F0FE /* LocationViewController.swift */; };
 		0BF946F429D9267900B29068 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF946F329D9267800B29068 /* Helper.swift */; };
 		20C6BC91BA5055193E671727 /* Pods_RickAndMorty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57DA10C1B7F4173180625DD /* Pods_RickAndMorty.framework */; };
+		D9A69ACB29DBE71300B983B5 /* LoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A69AC929DBE71300B983B5 /* LoadingVC.swift */; };
+		D9A69ACC29DBE71300B983B5 /* LoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9A69ACA29DBE71300B983B5 /* LoadingVC.xib */; };
 		D9E1713829DAD9F300131CD9 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1713629DAD9F300131CD9 /* LocationCell.swift */; };
 		D9E1713929DAD9F300131CD9 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E1713729DAD9F300131CD9 /* LocationCell.xib */; };
 		D9E1713D29DAE4FE00131CD9 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1713B29DAE4FE00131CD9 /* EpisodeViewController.swift */; };
@@ -74,6 +76,8 @@
 		0BF946F329D9267800B29068 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		80F959B9057CC4D45BAC4A00 /* Pods-RickAndMorty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMorty.release.xcconfig"; path = "Target Support Files/Pods-RickAndMorty/Pods-RickAndMorty.release.xcconfig"; sourceTree = "<group>"; };
 		90935BC013E54DCFC7121791 /* Pods-RickAndMorty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMorty.debug.xcconfig"; path = "Target Support Files/Pods-RickAndMorty/Pods-RickAndMorty.debug.xcconfig"; sourceTree = "<group>"; };
+		D9A69AC929DBE71300B983B5 /* LoadingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingVC.swift; sourceTree = "<group>"; };
+		D9A69ACA29DBE71300B983B5 /* LoadingVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingVC.xib; sourceTree = "<group>"; };
 		D9E1713629DAD9F300131CD9 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		D9E1713729DAD9F300131CD9 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		D9E1713B29DAE4FE00131CD9 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +198,8 @@
 				0BF2104929D838310085F0FE /* Location */,
 				0B4AE8E329D4C04600E8760E /* Character */,
 				0B4AE8E029D4BF1C00E8760E /* SettingViewController.xib */,
+				D9A69AC929DBE71300B983B5 /* LoadingVC.swift */,
+				D9A69ACA29DBE71300B983B5 /* LoadingVC.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -346,6 +352,7 @@
 				0B5C6C4A29D52EEC00134416 /* LaunchScreen.storyboard in Resources */,
 				0B28EA0029DB21B000436149 /* CharacterDetailViewController.xib in Resources */,
 				D9E1713929DAD9F300131CD9 /* LocationCell.xib in Resources */,
+				D9A69ACC29DBE71300B983B5 /* LoadingVC.xib in Resources */,
 				0B5C6C4729D52EEC00134416 /* Assets.xcassets in Resources */,
 				0B4AE92829D4EC0000E8760E /* CharacterCollectionViewCell.xib in Resources */,
 				0B4AE8E229D4BF1C00E8760E /* SettingViewController.xib in Resources */,
@@ -419,6 +426,7 @@
 				D9E1713829DAD9F300131CD9 /* LocationCell.swift in Sources */,
 				0BF2103529D804800085F0FE /* ConnectionManager.swift in Sources */,
 				0BF2104129D82B9C0085F0FE /* UIImageViewExtension.swift in Sources */,
+				D9A69ACB29DBE71300B983B5 /* LoadingVC.swift in Sources */,
 				0BF2103C29D804800085F0FE /* Reachability.swift in Sources */,
 				0BF2104729D837B40085F0FE /* LocationViewController.swift in Sources */,
 				0B4AE92A29D4F08F00E8760E /* Constants.swift in Sources */,

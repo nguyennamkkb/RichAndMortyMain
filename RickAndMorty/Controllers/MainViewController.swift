@@ -11,18 +11,19 @@ class MainViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let characterVC = CharacterViewController()
         characterVC.titleController = "Character"
         characterVC.tabBarItem = UITabBarItem(title: "Character", image: UIImage(systemName: "person"), tag: 1)
     
-        
+        let nav = UINavigationController(rootViewController: characterVC)
         let locationVC  = LocationViewController()
         locationVC.title = "Location"
         locationVC.tabBarItem = UITabBarItem(title: "Location", image: UIImage(systemName: "person"), tag: 1)
         
        
         
-        self.viewControllers = [characterVC, locationVC]
+        self.viewControllers = [nav, locationVC]
         
     }
 

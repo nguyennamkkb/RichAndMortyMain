@@ -52,13 +52,7 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //    print(listCharacter[indexPath.row].toJSON())
         let item = listCharacter[indexPath.row]
-        let vc = CharacterDetailViewController(
-            characterImage: item.image?,
-            characterName: item.name?,
-            characterStatus: item.status?,
-            characterLocation: item.location?.name,
-            characterFirstSeen: "Earth"
-        )
+        let vc = CharacterDetailViewController(item: item)
 
 //
 //        vc.characterName?.text = item.name ?? ""
@@ -67,6 +61,7 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
 //        vc.characterLocation?.text = item.location?.name ?? ""
 //        vc.characterFirstSeen?.text = "Earth"
         print("push CharacterDetailViewController")
+        vc.hidesBottomBarWhenPushed = true
         pushVC(controller: vc)
 
         

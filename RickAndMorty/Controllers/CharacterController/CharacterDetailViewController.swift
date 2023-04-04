@@ -15,13 +15,10 @@ class CharacterDetailViewController: UIViewController {
     @IBOutlet var characterStatus: UILabel!
     @IBOutlet var characterLocation: UILabel!
     @IBOutlet var characterFirstSeen: UILabel!
-    
-    init(characterImage: UIImageView!, characterName: UILabel!, characterStatus: UILabel!, characterLocation: UILabel!, characterFirstSeen: UILabel!) {
-        self.characterImage = characterImage
-        self.characterName = characterName
-        self.characterStatus = characterStatus
-        self.characterLocation = characterLocation
-        self.characterFirstSeen = characterFirstSeen
+    var urlImage: String = ""
+    var objCharacter: RMCharacter = RMCharacter()
+    init(item: RMCharacter) {
+        self.objCharacter = item
         super.init(nibName: "CharacterDetailViewController", bundle: nil)
     }
     
@@ -33,6 +30,11 @@ class CharacterDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Detail Character"
+        characterImage.kf.setImage(with: URL(string: objCharacter.image ?? ""))
+        characterName.text = objCharacter.name ?? ""
+        characterStatus.text = "\(objCharacter.status ?? "unknown") - \(objCharacter.species ?? "unknown")"
+        characterLocation.text = objCharacter.location?.name ?? ""
+        characterFirstSeen.text = "Earth"
         // Do any additional setup after loading the view.
     }
     
