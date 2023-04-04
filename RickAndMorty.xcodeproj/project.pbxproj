@@ -18,6 +18,7 @@
 		0B4AE92829D4EC0000E8760E /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AE92629D4EC0000E8760E /* CharacterCollectionViewCell.xib */; };
 		0B4AE92A29D4F08F00E8760E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AE92929D4F08F00E8760E /* Constants.swift */; };
 		0B50BBB429DC72B6000BA9D3 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50BBB329DC72B6000BA9D3 /* CustomNavBar.swift */; };
+		0B50BBB629DC8B1A000BA9D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50BBB529DC8B1A000BA9D3 /* Constants.swift */; };
 		0B5C6C3E29D52EEC00134416 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C6C3D29D52EEC00134416 /* AppDelegate.swift */; };
 		0B5C6C4029D52EEC00134416 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C6C3F29D52EEC00134416 /* SceneDelegate.swift */; };
 		0B5C6C4229D52EEC00134416 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C6C4129D52EEC00134416 /* MainViewController.swift */; };
@@ -57,6 +58,7 @@
 		0B4AE92629D4EC0000E8760E /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
 		0B4AE92929D4F08F00E8760E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0B50BBB329DC72B6000BA9D3 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomNavBar.swift; path = "../../../../../.Trash/RichAndMortyMain 21.31.42/RickAndMorty/Views/CustomNavBar.swift"; sourceTree = "<group>"; };
+		0B50BBB529DC8B1A000BA9D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0B5C6C3A29D52EEC00134416 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B5C6C3D29D52EEC00134416 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B5C6C3F29D52EEC00134416 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			children = (
 				0BF2104029D82B9C0085F0FE /* UIImageViewExtension.swift */,
 				0BF946F329D9267800B29068 /* Helper.swift */,
+				0B50BBB529DC8B1A000BA9D3 /* Constants.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -427,6 +430,7 @@
 				0B4AE8EA29D4D17100E8760E /* User.swift in Sources */,
 				0B5C6C4229D52EEC00134416 /* MainViewController.swift in Sources */,
 				0BF946F429D9267900B29068 /* Helper.swift in Sources */,
+				0B50BBB629DC8B1A000BA9D3 /* Constants.swift in Sources */,
 				D9E1713D29DAE4FE00131CD9 /* EpisodeViewController.swift in Sources */,
 				0BF2103729D804800085F0FE /* Params.swift in Sources */,
 				0B50BBB429DC72B6000BA9D3 /* CustomNavBar.swift in Sources */,
