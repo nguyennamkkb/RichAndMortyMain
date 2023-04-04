@@ -11,6 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailViewController" customModule="RickAndMorty" customModuleProvider="target">
             <connections>
+                <outlet property="characterFirstSeen" destination="Nuq-Ft-nfR" id="SVH-Gc-KVO"/>
+                <outlet property="characterImage" destination="x49-51-cDr" id="deR-YG-H0O"/>
+                <outlet property="characterLocation" destination="8pk-6k-dQr" id="2qA-3K-KU9"/>
+                <outlet property="characterName" destination="958-zS-Bxt" id="ZDt-cG-rfb"/>
+                <outlet property="characterStatus" destination="18D-Ej-MR4" id="ala-sf-UbX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,44 +24,44 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x49-51-cDr">
-                    <rect key="frame" x="5" y="64" width="383" height="350"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 67" translatesAutoresizingMaskIntoConstraints="NO" id="x49-51-cDr">
+                    <rect key="frame" x="5" y="64" width="383" height="450"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="350" id="DXT-JC-JW8"/>
+                        <constraint firstAttribute="height" constant="450" id="DXT-JC-JW8"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Character Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="958-zS-Bxt">
-                    <rect key="frame" x="5" y="419" width="383" height="30"/>
+                    <rect key="frame" x="5" y="519" width="383" height="30"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                     <color key="textColor" white="0.94999999999999996" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="18D-Ej-MR4">
-                    <rect key="frame" x="5" y="454" width="383" height="26.333333333333314"/>
+                    <rect key="frame" x="5" y="554" width="383" height="26.333333333333371"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <color key="textColor" red="0.95925635099999995" green="0.95925635099999995" blue="0.95925635099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last known location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEM-1j-Wrc">
-                    <rect key="frame" x="5" y="510.33333333333331" width="383" height="26.333333333333314"/>
+                    <rect key="frame" x="5" y="610.33333333333337" width="383" height="26.333333333333371"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <color key="textColor" systemColor="systemGrayColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pk-6k-dQr">
-                    <rect key="frame" x="5" y="541.66666666666663" width="383" height="30"/>
+                    <rect key="frame" x="5" y="641.66666666666663" width="383" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <color key="textColor" red="0.95925635099999995" green="0.95925635099999995" blue="0.95925635099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First seen in:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bdt-qV-8U5">
-                    <rect key="frame" x="5" y="601.66666666666663" width="383" height="26.333333333333371"/>
+                    <rect key="frame" x="5" y="701.66666666666663" width="383" height="26.333333333333371"/>
                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                     <color key="textColor" systemColor="systemGrayColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="first seen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nuq-Ft-nfR">
-                    <rect key="frame" x="5" y="633" width="383" height="30"/>
+                    <rect key="frame" x="5" y="733" width="383" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <color key="textColor" red="0.95925635099999995" green="0.95925635099999995" blue="0.95925635099999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
@@ -91,6 +96,7 @@
         </view>
     </objects>
     <resources>
+        <image name="Rectangle 67" width="93" height="93"/>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
