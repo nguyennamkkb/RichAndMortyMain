@@ -21,7 +21,6 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         collectionView.dataSource = self
         let nib = UINib(nibName: "CharacterCollectionViewCell", bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: "cell")
-        // Do any additional setup after loading the view.
         setLayout()
         getFirstCharacters()
     }
