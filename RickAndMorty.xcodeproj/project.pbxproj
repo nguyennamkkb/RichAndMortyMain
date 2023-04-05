@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0B1DCA1F29D83879007A412A /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1DCA1E29D83879007A412A /* LocationViewController.xib */; };
-		0B28E9FF29DB21B000436149 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B28E9FD29DB21B000436149 /* CharacterDetailViewController.swift */; };
-		0B28EA0029DB21B000436149 /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B28E9FE29DB21B000436149 /* CharacterDetailViewController.xib */; };
+		0B389FF229DDB6900008C01B /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B389FF029DDB6900008C01B /* CharacterDetailViewController.swift */; };
+		0B389FF329DDB6900008C01B /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B389FF129DDB6900008C01B /* CharacterDetailViewController.xib */; };
 		0B4AE8E229D4BF1C00E8760E /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AE8E029D4BF1C00E8760E /* SettingViewController.xib */; };
 		0B4AE8EA29D4D17100E8760E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AE8E929D4D17100E8760E /* User.swift */; };
 		0B4AE92329D4EBB700E8760E /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AE92129D4EBB700E8760E /* CharacterViewController.swift */; };
@@ -45,8 +45,8 @@
 
 /* Begin PBXFileReference section */
 		0B1DCA1E29D83879007A412A /* LocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
-		0B28E9FD29DB21B000436149 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
-		0B28E9FE29DB21B000436149 /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
+		0B389FF029DDB6900008C01B /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		0B389FF129DDB6900008C01B /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
 		0B4AE8E029D4BF1C00E8760E /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		0B4AE8E929D4D17100E8760E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0B4AE92129D4EBB700E8760E /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterViewController.swift; path = RickAndMorty/Controllers/CharacterController/CharacterViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -116,7 +116,8 @@
 			children = (
 				0B4AE92629D4EC0000E8760E /* CharacterCollectionViewCell.xib */,
 				0B4AE92229D4EBB700E8760E /* CharacterViewController.xib */,
-				0B28E9FE29DB21B000436149 /* CharacterDetailViewController.xib */,
+				0B389FF029DDB6900008C01B /* CharacterDetailViewController.swift */,
+				0B389FF129DDB6900008C01B /* CharacterDetailViewController.xib */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -126,7 +127,6 @@
 			children = (
 				0B4AE92129D4EBB700E8760E /* CharacterViewController.swift */,
 				0B4AE92529D4EC0000E8760E /* CharacterCollectionViewCell.swift */,
-				0B28E9FD29DB21B000436149 /* CharacterDetailViewController.swift */,
 			);
 			path = CharacterController;
 			sourceTree = "<group>";
@@ -354,8 +354,8 @@
 			files = (
 				0B4AE92429D4EBB700E8760E /* CharacterViewController.xib in Resources */,
 				D9E1713E29DAE4FE00131CD9 /* EpisodeViewController.xib in Resources */,
+				0B389FF329DDB6900008C01B /* CharacterDetailViewController.xib in Resources */,
 				0B5C6C4A29D52EEC00134416 /* LaunchScreen.storyboard in Resources */,
-				0B28EA0029DB21B000436149 /* CharacterDetailViewController.xib in Resources */,
 				D9E1713929DAD9F300131CD9 /* LocationCell.xib in Resources */,
 				0B5C6C4729D52EEC00134416 /* Assets.xcassets in Resources */,
 				0B4AE92829D4EC0000E8760E /* CharacterCollectionViewCell.xib in Resources */,
@@ -426,6 +426,7 @@
 				0BF2103729D804800085F0FE /* Params.swift in Sources */,
 				0B5C6C3E29D52EEC00134416 /* AppDelegate.swift in Sources */,
 				0BF2103429D804800085F0FE /* BaseResponse.swift in Sources */,
+				0B389FF229DDB6900008C01B /* CharacterDetailViewController.swift in Sources */,
 				0B5C6C4029D52EEC00134416 /* SceneDelegate.swift in Sources */,
 				0BF20FFD29D7BB080085F0FE /* RMCharacter.swift in Sources */,
 				0B4AE92729D4EC0000E8760E /* CharacterCollectionViewCell.swift in Sources */,
@@ -434,7 +435,6 @@
 				0BF2104129D82B9C0085F0FE /* UIImageViewExtension.swift in Sources */,
 				0BF2103C29D804800085F0FE /* Reachability.swift in Sources */,
 				0BF2104729D837B40085F0FE /* LocationViewController.swift in Sources */,
-				0B28E9FF29DB21B000436149 /* CharacterDetailViewController.swift in Sources */,
 				0BF2103D29D804800085F0FE /* ServiceManager.swift in Sources */,
 				D9E1714029DAE57600131CD9 /* RMEpisode.swift in Sources */,
 			);
