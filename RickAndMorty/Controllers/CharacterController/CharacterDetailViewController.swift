@@ -29,7 +29,7 @@ class CharacterDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "Detail Character"
+        title = objCharacter.name ?? ""
         characterImage.kf.setImage(with: URL(string: objCharacter.image ?? ""))
         characterName.text = objCharacter.name ?? ""
         characterStatus.text = "\(objCharacter.status ?? "unknown") - \(objCharacter.species ?? "unknown")"

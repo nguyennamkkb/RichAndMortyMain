@@ -9,7 +9,6 @@ import UIKit
 
 class MainViewController: UITabBarController {
 
-    let customNavBar = CustomNavigationBar()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,7 +16,8 @@ class MainViewController: UITabBarController {
         characterVC.title = "Character"
         characterVC.tabBarItem = UITabBarItem(title: "Character", image: UIImage(systemName: "person"), tag: 1)
         let nav1 = UINavigationController(rootViewController: characterVC)
-        nav1.navigationBar.backgroundColor = .white
+
+      
         
         let locationVC  = LocationViewController()
         locationVC.title = "Location"

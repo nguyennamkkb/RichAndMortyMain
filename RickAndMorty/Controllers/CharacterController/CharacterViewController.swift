@@ -18,6 +18,7 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoadingScreen.shared.show()
         collectionView.delegate = self
         collectionView.dataSource = self
         view.backgroundColor = .white
@@ -25,6 +26,7 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         collectionView.register(nib, forCellWithReuseIdentifier: "cell")
         setLayout()
         getFirstCharacters()
+        LoadingScreen.shared.hide()
     }
     func setUpNavBar(){
        
@@ -64,7 +66,7 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     func setLayout(){
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        let width = Constants.screenWidth / 2 - 7.5
+        let width = screenWidth / 2 - 7.5
         let height = 300
         layout.minimumInteritemSpacing = 2.5
         layout.minimumLineSpacing = 5
