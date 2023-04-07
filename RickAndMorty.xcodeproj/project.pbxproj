@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		0B1DCA1F29D83879007A412A /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1DCA1E29D83879007A412A /* LocationViewController.xib */; };
 		0B389FF229DDB6900008C01B /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B389FF029DDB6900008C01B /* CharacterDetailViewController.swift */; };
-		0B389FF329DDB6900008C01B /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B389FF129DDB6900008C01B /* CharacterDetailViewController.xib */; };
 		0B4AE8E229D4BF1C00E8760E /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AE8E029D4BF1C00E8760E /* SettingViewController.xib */; };
 		0B4AE8EA29D4D17100E8760E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AE8E929D4D17100E8760E /* User.swift */; };
 		0B4AE92329D4EBB700E8760E /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AE92129D4EBB700E8760E /* CharacterViewController.swift */; };
@@ -17,6 +16,9 @@
 		0B4AE92729D4EC0000E8760E /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AE92529D4EC0000E8760E /* CharacterCollectionViewCell.swift */; };
 		0B4AE92829D4EC0000E8760E /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AE92629D4EC0000E8760E /* CharacterCollectionViewCell.xib */; };
 		0B50BBB629DC8B1A000BA9D3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50BBB529DC8B1A000BA9D3 /* Constants.swift */; };
+		0B50E8EF29E08BA400382AE6 /* CharacterImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B50E8ED29E08BA400382AE6 /* CharacterImageCell.swift */; };
+		0B50E8F029E08BA400382AE6 /* CharacterImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B50E8EE29E08BA400382AE6 /* CharacterImageCell.xib */; };
+		0B50E8F229E08C4C00382AE6 /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B50E8F129E08C4C00382AE6 /* CharacterDetailViewController.xib */; };
 		0B5C6C3E29D52EEC00134416 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C6C3D29D52EEC00134416 /* AppDelegate.swift */; };
 		0B5C6C4029D52EEC00134416 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C6C3F29D52EEC00134416 /* SceneDelegate.swift */; };
 		0B5C6C4229D52EEC00134416 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5C6C4129D52EEC00134416 /* MainViewController.swift */; };
@@ -52,7 +54,6 @@
 /* Begin PBXFileReference section */
 		0B1DCA1E29D83879007A412A /* LocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		0B389FF029DDB6900008C01B /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
-		0B389FF129DDB6900008C01B /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
 		0B4AE8E029D4BF1C00E8760E /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		0B4AE8E929D4D17100E8760E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0B4AE92129D4EBB700E8760E /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterViewController.swift; path = RickAndMorty/Controllers/CharacterController/CharacterViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -60,6 +61,9 @@
 		0B4AE92529D4EC0000E8760E /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
 		0B4AE92629D4EC0000E8760E /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
 		0B50BBB529DC8B1A000BA9D3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0B50E8ED29E08BA400382AE6 /* CharacterImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImageCell.swift; sourceTree = "<group>"; };
+		0B50E8EE29E08BA400382AE6 /* CharacterImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterImageCell.xib; sourceTree = "<group>"; };
+		0B50E8F129E08C4C00382AE6 /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
 		0B5C6C3A29D52EEC00134416 /* RickAndMorty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMorty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B5C6C3D29D52EEC00134416 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B5C6C3F29D52EEC00134416 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,12 +132,14 @@
 			children = (
 				0B4AE92629D4EC0000E8760E /* CharacterCollectionViewCell.xib */,
 				0B4AE92229D4EBB700E8760E /* CharacterViewController.xib */,
+				0B50E8F129E08C4C00382AE6 /* CharacterDetailViewController.xib */,
 				0B389FF029DDB6900008C01B /* CharacterDetailViewController.swift */,
-				0B389FF129DDB6900008C01B /* CharacterDetailViewController.xib */,
 				D92C4ABD29DFD97800C50C8A /* NewVC.swift */,
 				D92C4ABE29DFD97800C50C8A /* NewVC.xib */,
 				0BC072A829E0720B0008196D /* TypeCell.swift */,
 				0BC072A929E0720B0008196D /* TypeCell.xib */,
+				0B50E8ED29E08BA400382AE6 /* CharacterImageCell.swift */,
+				0B50E8EE29E08BA400382AE6 /* CharacterImageCell.xib */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -365,12 +371,13 @@
 				0B4AE92429D4EBB700E8760E /* CharacterViewController.xib in Resources */,
 				D9F69D5029E02B82004557F5 /* StyleCell.xib in Resources */,
 				D9E1713E29DAE4FE00131CD9 /* EpisodeViewController.xib in Resources */,
-				0B389FF329DDB6900008C01B /* CharacterDetailViewController.xib in Resources */,
 				0B5C6C4A29D52EEC00134416 /* LaunchScreen.storyboard in Resources */,
 				D9E1713929DAD9F300131CD9 /* LocationCell.xib in Resources */,
 				0B5C6C4729D52EEC00134416 /* Assets.xcassets in Resources */,
 				0B4AE92829D4EC0000E8760E /* CharacterCollectionViewCell.xib in Resources */,
 				0B4AE8E229D4BF1C00E8760E /* SettingViewController.xib in Resources */,
+				0B50E8F029E08BA400382AE6 /* CharacterImageCell.xib in Resources */,
+				0B50E8F229E08C4C00382AE6 /* CharacterDetailViewController.xib in Resources */,
 				0B1DCA1F29D83879007A412A /* LocationViewController.xib in Resources */,
 				D92C4AC029DFD97800C50C8A /* NewVC.xib in Resources */,
 				0BC072AB29E0720B0008196D /* TypeCell.xib in Resources */,
@@ -433,6 +440,7 @@
 				0B4AE8EA29D4D17100E8760E /* User.swift in Sources */,
 				D9F69D4F29E02B82004557F5 /* StyleCell.swift in Sources */,
 				0B5C6C4229D52EEC00134416 /* MainViewController.swift in Sources */,
+				0B50E8EF29E08BA400382AE6 /* CharacterImageCell.swift in Sources */,
 				D9D2169729DD218C00BE27A8 /* LoadingScreen.swift in Sources */,
 				0BF946F429D9267900B29068 /* Helper.swift in Sources */,
 				D92C4ABF29DFD97800C50C8A /* NewVC.swift in Sources */,

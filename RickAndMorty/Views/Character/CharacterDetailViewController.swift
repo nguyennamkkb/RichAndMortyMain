@@ -14,7 +14,6 @@ class CharacterDetailViewController: UIViewController,UINavigationControllerDele
     
     
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var imageCharacter: UIImageView!
     @IBOutlet var nameCharacter: UILabel!
     var item: RMCharacter = RMCharacter()
     override func viewDidLoad() {
@@ -25,12 +24,16 @@ class CharacterDetailViewController: UIViewController,UINavigationControllerDele
         tableView.delegate = self
         tableView.dataSource = self
         self.nameCharacter.text = item.name ?? ""
-        self.imageCharacter.kf.setImage(with: URL(string: item.image ?? ""))
+        let nib1 = UINib(nibName: "CharacterImageCell", bundle: .main)
+        tableView.register(nib1, forCellReuseIdentifier: "CharacterImageCell")
         let nib = UINib(nibName: "TypeCell", bundle: .main)
         tableView.register(nib, forCellReuseIdentifier: "TypeCell")
+        
+        
+        
         tableView.rowHeight = 400
-
-
+        
+        
     }
     init(item: RMCharacter){
         self.item = item
@@ -51,17 +54,27 @@ class CharacterDetailViewController: UIViewController,UINavigationControllerDele
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TypeCell", for: indexPath) as? TypeCell else {return UITableViewCell()}
-        cell.location.text = item.location?.name ?? "Unknown"
-        cell.type.text = item.type ?? "Unknown"
-        cell.gender.text = item.gender ?? "Unknown"
-        cell.status.text = item.status ?? "Unknown"
-        cell.spceies.text = item.species ?? "Unknown"
-        cell.origin.text = item.origin?.name ?? "Unknown"
-        return cell
+        if indexPath.row == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterImageCell", for: indexPath) as? CharacterImageCell else {return UITableViewCell()}
+            cell.imageCharacter.kf.setImage(with: URL(string: item.image ?? ""))
+
+            return cell
+        }
+        else{
+          
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "TypeCell", for: indexPath) as? TypeCell else {return UITableViewCell()}
+            cell.location.text = item.location?.name ?? "Unknown"
+            cell.type.text = item.type ?? "Unknown"
+            cell.gender.text = item.gender ?? "Unknown"
+            cell.status.text = item.status ?? "Unknown"
+            cell.spceies.text = item.species ?? "Unknown"
+            cell.origin.text = item.origin?.name ?? "Unknown"
+            return cell
+        }
     }
 }
