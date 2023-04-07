@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailViewController" customModule="RickAndMorty" customModuleProvider="target">
             <connections>
+                <outlet property="imageCharacter" destination="0KX-72-s6A" id="wTe-n4-KLV"/>
+                <outlet property="nameCharacter" destination="2g3-b8-scK" id="vJ8-Fd-osM"/>
+                <outlet property="tableView" destination="DB1-Sv-Z2d" id="uGV-v1-Zvk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,16 +30,19 @@
                     <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qT5-pR-k5r">
-                            <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="88" height="44"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="44" id="i7s-7z-ta6"/>
-                                <constraint firstAttribute="width" secondItem="qT5-pR-k5r" secondAttribute="height" multiplier="1:1" id="rbO-O3-xBv"/>
+                                <constraint firstAttribute="width" secondItem="qT5-pR-k5r" secondAttribute="height" multiplier="4:2" id="rbO-O3-xBv"/>
                             </constraints>
                             <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system"/>
+                            <buttonConfiguration key="configuration" style="plain" image="chevron.backward" catalog="system" title="Back"/>
+                            <connections>
+                                <action selector="BacktoMainCharacter:" destination="-1" eventType="touchUpInside" id="ipd-he-cJI"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2g3-b8-scK">
-                            <rect key="frame" x="186.5" y="0.0" width="41.5" height="44"/>
+                            <rect key="frame" x="186.5" y="0.0" width="41" height="44"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -59,9 +65,12 @@
                         <constraint firstAttribute="height" constant="350" id="8va-ey-yS3"/>
                     </constraints>
                 </imageView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DB1-Sv-Z2d">
-                    <rect key="frame" x="5" y="452" width="404" height="444"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DB1-Sv-Z2d">
+                    <rect key="frame" x="10" y="452" width="394" height="410"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <viewLayoutGuide key="contentLayoutGuide" id="T3F-1d-UtO"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="kMv-zU-ogy"/>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -70,17 +79,17 @@
                 <constraint firstItem="0KX-72-s6A" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="2ep-hn-PFf"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0KX-72-s6A" secondAttribute="trailing" constant="5" id="7Sy-W7-u5Q"/>
                 <constraint firstItem="MbH-p8-W15" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="B0E-a1-6fJ"/>
-                <constraint firstAttribute="bottom" secondItem="DB1-Sv-Z2d" secondAttribute="bottom" id="Ca9-RC-yc0"/>
                 <constraint firstItem="wQ7-Go-kSQ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Cun-HG-TD7"/>
-                <constraint firstItem="DB1-Sv-Z2d" firstAttribute="top" secondItem="0KX-72-s6A" secondAttribute="bottom" constant="5" id="INU-2p-bhy"/>
-                <constraint firstItem="DB1-Sv-Z2d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="IZA-eD-OQB"/>
+                <constraint firstItem="DB1-Sv-Z2d" firstAttribute="top" secondItem="0KX-72-s6A" secondAttribute="bottom" constant="5" id="RYB-be-sF2"/>
+                <constraint firstItem="DB1-Sv-Z2d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="UfC-nW-HPA"/>
                 <constraint firstItem="MbH-p8-W15" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZJF-4t-dF0"/>
                 <constraint firstItem="wQ7-Go-kSQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aaA-kb-XB4"/>
                 <constraint firstItem="0KX-72-s6A" firstAttribute="top" secondItem="wQ7-Go-kSQ" secondAttribute="bottom" constant="5" id="drc-e8-hZ7"/>
                 <constraint firstItem="wQ7-Go-kSQ" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="iZD-9g-yX2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DB1-Sv-Z2d" secondAttribute="trailing" constant="10" id="jX1-tT-ZF9"/>
                 <constraint firstItem="MbH-p8-W15" firstAttribute="bottom" secondItem="wQ7-Go-kSQ" secondAttribute="bottom" id="ohj-gs-iyn"/>
                 <constraint firstItem="MbH-p8-W15" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="qX7-Xz-FHn"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="DB1-Sv-Z2d" secondAttribute="trailing" constant="5" id="qrO-fx-fX8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="DB1-Sv-Z2d" secondAttribute="bottom" id="wEU-3y-PUO"/>
             </constraints>
             <point key="canvasLocation" x="227.536231884058" y="30.803571428571427"/>
         </view>
