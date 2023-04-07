@@ -35,12 +35,16 @@
 		0BF2104729D837B40085F0FE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF2104529D837B40085F0FE /* LocationViewController.swift */; };
 		0BF946F429D9267900B29068 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF946F329D9267800B29068 /* Helper.swift */; };
 		20C6BC91BA5055193E671727 /* Pods_RickAndMorty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E57DA10C1B7F4173180625DD /* Pods_RickAndMorty.framework */; };
+		D92C4ABF29DFD97800C50C8A /* NewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92C4ABD29DFD97800C50C8A /* NewVC.swift */; };
+		D92C4AC029DFD97800C50C8A /* NewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = D92C4ABE29DFD97800C50C8A /* NewVC.xib */; };
 		D9D2169729DD218C00BE27A8 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D2169629DD218C00BE27A8 /* LoadingScreen.swift */; };
 		D9E1713829DAD9F300131CD9 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1713629DAD9F300131CD9 /* LocationCell.swift */; };
 		D9E1713929DAD9F300131CD9 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E1713729DAD9F300131CD9 /* LocationCell.xib */; };
 		D9E1713D29DAE4FE00131CD9 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1713B29DAE4FE00131CD9 /* EpisodeViewController.swift */; };
 		D9E1713E29DAE4FE00131CD9 /* EpisodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E1713C29DAE4FE00131CD9 /* EpisodeViewController.xib */; };
 		D9E1714029DAE57600131CD9 /* RMEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1713F29DAE57600131CD9 /* RMEpisode.swift */; };
+		D9F69D4F29E02B82004557F5 /* StyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F69D4D29E02B82004557F5 /* StyleCell.swift */; };
+		D9F69D5029E02B82004557F5 /* StyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9F69D4E29E02B82004557F5 /* StyleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,12 +79,16 @@
 		0BF946F329D9267800B29068 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		80F959B9057CC4D45BAC4A00 /* Pods-RickAndMorty.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMorty.release.xcconfig"; path = "Target Support Files/Pods-RickAndMorty/Pods-RickAndMorty.release.xcconfig"; sourceTree = "<group>"; };
 		90935BC013E54DCFC7121791 /* Pods-RickAndMorty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RickAndMorty.debug.xcconfig"; path = "Target Support Files/Pods-RickAndMorty/Pods-RickAndMorty.debug.xcconfig"; sourceTree = "<group>"; };
+		D92C4ABD29DFD97800C50C8A /* NewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewVC.swift; sourceTree = "<group>"; };
+		D92C4ABE29DFD97800C50C8A /* NewVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewVC.xib; sourceTree = "<group>"; };
 		D9D2169629DD218C00BE27A8 /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		D9E1713629DAD9F300131CD9 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
 		D9E1713729DAD9F300131CD9 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		D9E1713B29DAE4FE00131CD9 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		D9E1713C29DAE4FE00131CD9 /* EpisodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeViewController.xib; sourceTree = "<group>"; };
 		D9E1713F29DAE57600131CD9 /* RMEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisode.swift; sourceTree = "<group>"; };
+		D9F69D4D29E02B82004557F5 /* StyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleCell.swift; sourceTree = "<group>"; };
+		D9F69D4E29E02B82004557F5 /* StyleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StyleCell.xib; sourceTree = "<group>"; };
 		E57DA10C1B7F4173180625DD /* Pods_RickAndMorty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickAndMorty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -118,6 +126,8 @@
 				0B4AE92229D4EBB700E8760E /* CharacterViewController.xib */,
 				0B389FF029DDB6900008C01B /* CharacterDetailViewController.swift */,
 				0B389FF129DDB6900008C01B /* CharacterDetailViewController.xib */,
+				D92C4ABD29DFD97800C50C8A /* NewVC.swift */,
+				D92C4ABE29DFD97800C50C8A /* NewVC.xib */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -127,15 +137,10 @@
 			children = (
 				0B4AE92129D4EBB700E8760E /* CharacterViewController.swift */,
 				0B4AE92529D4EC0000E8760E /* CharacterCollectionViewCell.swift */,
+				D9F69D4D29E02B82004557F5 /* StyleCell.swift */,
+				D9F69D4E29E02B82004557F5 /* StyleCell.xib */,
 			);
 			path = CharacterController;
-			sourceTree = "<group>";
-		};
-		0B50BBB229DC7297000BA9D3 /* Customs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Customs;
 			sourceTree = "<group>";
 		};
 		0B5C6C3129D52EEC00134416 = {
@@ -199,7 +204,6 @@
 		0B5C6C5729D52EEC00134416 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0B50BBB229DC7297000BA9D3 /* Customs */,
 				0BF2104929D838310085F0FE /* Location */,
 				0B4AE8E329D4C04600E8760E /* Character */,
 				0B4AE8E029D4BF1C00E8760E /* SettingViewController.xib */,
@@ -353,6 +357,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4AE92429D4EBB700E8760E /* CharacterViewController.xib in Resources */,
+				D9F69D5029E02B82004557F5 /* StyleCell.xib in Resources */,
 				D9E1713E29DAE4FE00131CD9 /* EpisodeViewController.xib in Resources */,
 				0B389FF329DDB6900008C01B /* CharacterDetailViewController.xib in Resources */,
 				0B5C6C4A29D52EEC00134416 /* LaunchScreen.storyboard in Resources */,
@@ -361,6 +366,7 @@
 				0B4AE92829D4EC0000E8760E /* CharacterCollectionViewCell.xib in Resources */,
 				0B4AE8E229D4BF1C00E8760E /* SettingViewController.xib in Resources */,
 				0B1DCA1F29D83879007A412A /* LocationViewController.xib in Resources */,
+				D92C4AC029DFD97800C50C8A /* NewVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,9 +424,11 @@
 				0B815DBA29D99C7F006D434B /* RMLocation.swift in Sources */,
 				0BF2103629D804800085F0FE /* BaseNetworking.swift in Sources */,
 				0B4AE8EA29D4D17100E8760E /* User.swift in Sources */,
+				D9F69D4F29E02B82004557F5 /* StyleCell.swift in Sources */,
 				0B5C6C4229D52EEC00134416 /* MainViewController.swift in Sources */,
 				D9D2169729DD218C00BE27A8 /* LoadingScreen.swift in Sources */,
 				0BF946F429D9267900B29068 /* Helper.swift in Sources */,
+				D92C4ABF29DFD97800C50C8A /* NewVC.swift in Sources */,
 				0B50BBB629DC8B1A000BA9D3 /* Constants.swift in Sources */,
 				D9E1713D29DAE4FE00131CD9 /* EpisodeViewController.swift in Sources */,
 				0BF2103729D804800085F0FE /* Params.swift in Sources */,
