@@ -27,4 +27,13 @@ class TypeCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func bindData(item: RMCharacter) {
+        location.text = item.location?.name ?? "Unknown"
+        type.text = item.type ?? "Unknown"
+        gender.text = item.gender ?? "Unknown"
+        status.text = item.status ?? "Unknown"
+        spceies.text = item.species ?? "Unknown"
+        origin.text = item.origin?.name ?? "Unknown"
+    }
+    
 }

@@ -31,9 +31,6 @@ class CharacterDetailViewController: UIViewController,UINavigationControllerDele
         
         
         
-        tableView.rowHeight = 400
-        
-        
     }
     init(item: RMCharacter){
         self.item = item
@@ -56,24 +53,26 @@ class CharacterDetailViewController: UIViewController,UINavigationControllerDele
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterImageCell", for: indexPath) as? CharacterImageCell else {return UITableViewCell()}
             cell.imageCharacter.kf.setImage(with: URL(string: item.image ?? ""))
-
+            
             return cell
         }
         else{
-          
-            
+
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "TypeCell", for: indexPath) as? TypeCell else {return UITableViewCell()}
-            cell.location.text = item.location?.name ?? "Unknown"
-            cell.type.text = item.type ?? "Unknown"
-            cell.gender.text = item.gender ?? "Unknown"
-            cell.status.text = item.status ?? "Unknown"
-            cell.spceies.text = item.species ?? "Unknown"
-            cell.origin.text = item.origin?.name ?? "Unknown"
+            cell.bindData(item: item)
             return cell
         }
     }
