@@ -66,7 +66,6 @@ class CharacterDetailViewController: UIViewController,UINavigationControllerDele
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let typeSection = listSection.itemAtIndex(index: indexPath.row) else { return UITableViewCell() }
-    print(typeSection)
     switch typeSection {
     case .imageCell:
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "CharacterImageCell", for: indexPath) as? CharacterImageCell else {return UITableViewCell()}

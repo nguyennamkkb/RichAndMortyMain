@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -17,11 +17,52 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="szV-qH-UML">
+                    <rect key="frame" x="0.0" y="48" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="jhl-3K-iJU"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XtJ-f6-GhF">
+                    <rect key="frame" x="5" y="97" width="404" height="40"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfI-7U-3Rn">
+                            <rect key="frame" x="0.0" y="0.0" width="97.5" height="40"/>
+                            <color key="backgroundColor" red="0.95950061080000004" green="0.75441116090000004" blue="0.58752828840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Status"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsE-jn-xSa">
+                            <rect key="frame" x="102.5" y="0.0" width="97" height="40"/>
+                            <color key="backgroundColor" red="0.95950061080000004" green="0.75441116090000004" blue="0.58752828840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Species"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfP-tS-yyO">
+                            <rect key="frame" x="204.5" y="0.0" width="97.5" height="40"/>
+                            <color key="backgroundColor" red="0.95950061080000004" green="0.75441116090000004" blue="0.58752828840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Type"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eub-fe-B0t">
+                            <rect key="frame" x="307" y="0.0" width="97" height="40"/>
+                            <color key="backgroundColor" red="0.95950061080000004" green="0.75441116090000004" blue="0.58752828840000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Gender"/>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="1V8-JU-eRY"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="hlo-sg-hQ1"/>
+                    </constraints>
+                </stackView>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="EMy-FN-yzD">
-                    <rect key="frame" x="5" y="59" width="383" height="759"/>
+                    <rect key="frame" x="5" y="142" width="404" height="720"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yTc-pL-Lt8">
                         <size key="itemSize" width="128" height="128"/>
@@ -33,12 +74,18 @@
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <constraints>
+                <constraint firstItem="XtJ-f6-GhF" firstAttribute="top" secondItem="szV-qH-UML" secondAttribute="bottom" constant="5" id="3Li-xP-beJ"/>
+                <constraint firstItem="szV-qH-UML" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="C3y-iq-c16"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="EMy-FN-yzD" secondAttribute="bottom" id="DSh-qj-jgf"/>
-                <constraint firstItem="EMy-FN-yzD" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="UcQ-CM-DO2"/>
+                <constraint firstItem="EMy-FN-yzD" firstAttribute="top" secondItem="XtJ-f6-GhF" secondAttribute="bottom" constant="5" id="KNf-2o-VSr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="szV-qH-UML" secondAttribute="trailing" id="NiX-f9-IVF"/>
+                <constraint firstItem="szV-qH-UML" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Z5s-Uc-hfZ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XtJ-f6-GhF" secondAttribute="trailing" constant="5" id="gPK-e3-wp3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EMy-FN-yzD" secondAttribute="trailing" constant="5" id="hgc-1o-zsE"/>
                 <constraint firstItem="EMy-FN-yzD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="uY8-gi-JYd"/>
+                <constraint firstItem="XtJ-f6-GhF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="5" id="xjR-fk-XEN"/>
             </constraints>
-            <point key="canvasLocation" x="-25.190839694656489" y="20.422535211267608"/>
+            <point key="canvasLocation" x="-26.086956521739133" y="20.089285714285712"/>
         </view>
     </objects>
     <resources>
