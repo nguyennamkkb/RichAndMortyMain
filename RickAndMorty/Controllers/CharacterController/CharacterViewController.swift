@@ -8,12 +8,19 @@
 import UIKit
 import ObjectMapper
 import Kingfisher
+import DropDown
 class CharacterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var listCharacter = [RMCharacter]()
     var info = Info()
     var page: Int = 1
     var titleController: String?
+    
+    let dropdownStatus = DropDown()
+    let dropdownSpecies = DropDown()
+    let dropdownType = DropDown()
+    let dropDodropdownGenderwn = DropDown()
+    
     @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -29,7 +36,7 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         LoadingScreen.shared.hide()
     }
     func setUpNavBar(){
-       
+        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listCharacter.count
@@ -61,7 +68,7 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         let vc = CharacterDetailViewController(item: item)
         vc.hidesBottomBarWhenPushed = true
         pushVC(controller: vc)
-
+        
         
     }
     func setLayout(){
@@ -111,5 +118,51 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
     func pushVC(controller vc: UIViewController, animation anima: Bool = true) {
         self.navigationController?.pushViewController(vc, animated: anima)
     }
+    
+    @IBAction func selectStatus(_ sender: UIButton) {
+        dropdownStatus.dataSource = ["Alive", "Dead", "unknown"]
+        dropdownStatus.anchorView = sender //5
+        dropdownStatus.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
+        dropdownStatus.show() //7
+        dropdownStatus.selectionAction = { [weak self] (index: Int, item: String) in //8
+            guard let _ = self else { return }
+            sender.setTitle(item, for: .normal) //9
+        }
+    }
+    
+    @IBAction func selectSpecies(_ sender: UIButton) {
+        dropdownStatus.dataSource = ["Alive", "Dead", "unknown"]
+        dropdownStatus.anchorView = sender //5
+        dropdownStatus.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
+        dropdownStatus.show() //7
+        dropdownStatus.selectionAction = { [weak self] (index: Int, item: String) in //8
+            guard let _ = self else { return }
+            sender.setTitle(item, for: .normal) //9
+        }
+    }
+    
+    @IBAction func selectType(_ sender: UIButton) {
+        dropdownStatus.dataSource = ["Alive", "Dead", "unknown"]
+        dropdownStatus.anchorView = sender //5
+        dropdownStatus.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
+        dropdownStatus.show() //7
+        dropdownStatus.selectionAction = { [weak self] (index: Int, item: String) in //8
+            guard let _ = self else { return }
+            sender.setTitle(item, for: .normal) //9
+        }
+    }
+    
+    @IBAction func selectGender(_ sender: UIButton) {
+        dropdownStatus.dataSource = ["Female", "Female","Female", "unknown"]
+        dropdownStatus.anchorView = sender //5
+        dropdownStatus.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
+        dropdownStatus.show() //7
+        dropdownStatus.selectionAction = { [weak self] (index: Int, item: String) in //8
+            guard let _ = self else { return }
+            sender.setTitle(item, for: .normal) //9
+        }
+    }
+    
+    
     
 }

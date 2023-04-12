@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B1DCA1F29D83879007A412A /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1DCA1E29D83879007A412A /* LocationViewController.xib */; };
 		0B389FF229DDB6900008C01B /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B389FF029DDB6900008C01B /* CharacterDetailViewController.swift */; };
+		0B41C49429E6350A0094D25F /* LapLenhVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B41C49229E6350A0094D25F /* LapLenhVC.swift */; };
+		0B41C49529E6350A0094D25F /* LapLenhVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B41C49329E6350A0094D25F /* LapLenhVC.xib */; };
 		0B4AE8E229D4BF1C00E8760E /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AE8E029D4BF1C00E8760E /* SettingViewController.xib */; };
 		0B4AE8EA29D4D17100E8760E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AE8E929D4D17100E8760E /* User.swift */; };
 		0B4AE92329D4EBB700E8760E /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AE92129D4EBB700E8760E /* CharacterViewController.swift */; };
@@ -53,6 +55,8 @@
 /* Begin PBXFileReference section */
 		0B1DCA1E29D83879007A412A /* LocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		0B389FF029DDB6900008C01B /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		0B41C49229E6350A0094D25F /* LapLenhVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapLenhVC.swift; sourceTree = "<group>"; };
+		0B41C49329E6350A0094D25F /* LapLenhVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LapLenhVC.xib; sourceTree = "<group>"; };
 		0B4AE8E029D4BF1C00E8760E /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		0B4AE8E929D4D17100E8760E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0B4AE92129D4EBB700E8760E /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterViewController.swift; path = RickAndMorty/Controllers/CharacterController/CharacterViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -216,6 +220,8 @@
 				0B4AE8E329D4C04600E8760E /* Character */,
 				0B4AE8E029D4BF1C00E8760E /* SettingViewController.xib */,
 				D9D2169629DD218C00BE27A8 /* LoadingScreen.swift */,
+				0B41C49229E6350A0094D25F /* LapLenhVC.swift */,
+				0B41C49329E6350A0094D25F /* LapLenhVC.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B41C49529E6350A0094D25F /* LapLenhVC.xib in Resources */,
 				0B4AE92429D4EBB700E8760E /* CharacterViewController.xib in Resources */,
 				D9E1713E29DAE4FE00131CD9 /* EpisodeViewController.xib in Resources */,
 				0B5C6C4A29D52EEC00134416 /* LaunchScreen.storyboard in Resources */,
@@ -435,6 +442,7 @@
 				0BF2103629D804800085F0FE /* BaseNetworking.swift in Sources */,
 				0B4AE8EA29D4D17100E8760E /* User.swift in Sources */,
 				0B5C6C4229D52EEC00134416 /* MainViewController.swift in Sources */,
+				0B41C49429E6350A0094D25F /* LapLenhVC.swift in Sources */,
 				0B50E8EF29E08BA400382AE6 /* CharacterImageCell.swift in Sources */,
 				D9D2169729DD218C00BE27A8 /* LoadingScreen.swift in Sources */,
 				0BB86D3C29E1D58E005739DD /* ExArray.swift in Sources */,
