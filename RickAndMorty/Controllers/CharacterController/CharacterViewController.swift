@@ -8,16 +8,26 @@
 import UIKit
 import ObjectMapper
 import Kingfisher
+import DropDown
 class CharacterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    @IBOutlet weak var viewSearch: UIView!
     
     var listCharacter = [RMCharacter]()
     var info = Info()
     var page: Int = 1
     var titleController: String?
+    
+    let dropdownStatus = DropDown()
+    let dropdownSpecies = DropDown()
+    let dropdownType = DropDown()
+    let dropDodropdownGenderwn = DropDown()
+    var viewSearchHeight: Int = 0
+    
     @IBOutlet var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewSearchHeight = Int(viewSearch.frame.size.height)
         LoadingScreen.shared.show()
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -28,8 +38,12 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         getFirstCharacters()
         LoadingScreen.shared.hide()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
     func setUpNavBar(){
-       
+        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return listCharacter.count
@@ -61,7 +75,7 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         let vc = CharacterDetailViewController(item: item)
         vc.hidesBottomBarWhenPushed = true
         pushVC(controller: vc)
-
+        
         
     }
     func setLayout(){
@@ -111,5 +125,67 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
     func pushVC(controller vc: UIViewController, animation anima: Bool = true) {
         self.navigationController?.pushViewController(vc, animated: anima)
     }
+    
+    @IBAction func selectStatus(_ sender: UIButton) {
+        dropdownStatus.dataSource = ["Alive", "Dead", "unknown"]
+        dropdownStatus.anchorView = sender //5
+        dropdownStatus.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
+        dropdownStatus.show() //7
+        dropdownStatus.selectionAction = { [weak self] (index: Int, item: String) in //8
+            guard let _ = self else { return }
+            sender.setTitle(item, for: .normal) //9
+        }
+    }
+    
+    @IBAction func selectSpecies(_ sender: UIButton) {
+        dropdownStatus.dataSource = ["Alive", "Dead", "unknown"]
+        dropdownStatus.anchorView = sender //5
+        dropdownStatus.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
+        dropdownStatus.show() //7
+        dropdownStatus.selectionAction = { [weak self] (index: Int, item: String) in //8
+            guard let _ = self else { return }
+            sender.setTitle(item, for: .normal) //9
+        }
+    }
+    
+    @IBAction func selectType(_ sender: UIButton) {
+        dropdownStatus.dataSource = ["Alive", "Dead", "unknown"]
+        dropdownStatus.anchorView = sender //5
+        dropdownStatus.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
+        dropdownStatus.show() //7
+        dropdownStatus.selectionAction = { [weak self] (index: Int, item: String) in //8
+            guard let _ = self else { return }
+            sender.setTitle(item, for: .normal) //9
+        }
+    }
+    
+    @IBAction func selectGender(_ sender: UIButton) {
+        dropdownStatus.dataSource = ["Female", "Female","Female", "unknown"]
+        dropdownStatus.anchorView = sender //5
+        dropdownStatus.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
+        dropdownStatus.show() //7
+        dropdownStatus.selectionAction = { [weak self] (index: Int, item: String) in //8
+            guard let _ = self else { return }
+            sender.setTitle(item, for: .normal) //9
+        }
+    }
+    @IBAction func selectFilter(_ sender: UIButton) {
+        let heightView: Int = Int(viewSearch.frame.size.height)
+        print(heightView)
+        let heightConstraint0 = viewSearch.heightAnchor.constraint(equalToConstant: 0)
+        let heightConstraint100 = viewSearch.heightAnchor.constraint(equalToConstant: 100)
+        if heightView == 0 {
+            heightConstraint100.isActive = true
+            heightConstraint0.isActive = false
+        }else{
+            heightConstraint100.isActive = false
+            heightConstraint0.isActive = true
+        }
+        
+        print("selectFilter")
+        
+    }
+    
+    
     
 }

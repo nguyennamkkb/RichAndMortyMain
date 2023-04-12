@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0B1DCA1F29D83879007A412A /* LocationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B1DCA1E29D83879007A412A /* LocationViewController.xib */; };
 		0B389FF229DDB6900008C01B /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B389FF029DDB6900008C01B /* CharacterDetailViewController.swift */; };
+		0B41C49429E6350A0094D25F /* LapLenhVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B41C49229E6350A0094D25F /* LapLenhVC.swift */; };
+		0B41C49529E6350A0094D25F /* LapLenhVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B41C49329E6350A0094D25F /* LapLenhVC.xib */; };
 		0B4AE8E229D4BF1C00E8760E /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B4AE8E029D4BF1C00E8760E /* SettingViewController.xib */; };
 		0B4AE8EA29D4D17100E8760E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AE8E929D4D17100E8760E /* User.swift */; };
 		0B4AE92329D4EBB700E8760E /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4AE92129D4EBB700E8760E /* CharacterViewController.swift */; };
@@ -25,6 +27,7 @@
 		0B5C6C4729D52EEC00134416 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B5C6C4629D52EEC00134416 /* Assets.xcassets */; };
 		0B5C6C4A29D52EEC00134416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B5C6C4829D52EEC00134416 /* LaunchScreen.storyboard */; };
 		0B815DBA29D99C7F006D434B /* RMLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B815DB929D99C7F006D434B /* RMLocation.swift */; };
+		0BB86D3C29E1D58E005739DD /* ExArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB86D3B29E1D58E005739DD /* ExArray.swift */; };
 		0BC072AA29E0720B0008196D /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BC072A829E0720B0008196D /* TypeCell.swift */; };
 		0BC072AB29E0720B0008196D /* TypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0BC072A929E0720B0008196D /* TypeCell.xib */; };
 		0BF20FFD29D7BB080085F0FE /* RMCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BF20FFC29D7BB080085F0FE /* RMCharacter.swift */; };
@@ -47,13 +50,13 @@
 		D9E1713D29DAE4FE00131CD9 /* EpisodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1713B29DAE4FE00131CD9 /* EpisodeViewController.swift */; };
 		D9E1713E29DAE4FE00131CD9 /* EpisodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9E1713C29DAE4FE00131CD9 /* EpisodeViewController.xib */; };
 		D9E1714029DAE57600131CD9 /* RMEpisode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E1713F29DAE57600131CD9 /* RMEpisode.swift */; };
-		D9F69D4F29E02B82004557F5 /* StyleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F69D4D29E02B82004557F5 /* StyleCell.swift */; };
-		D9F69D5029E02B82004557F5 /* StyleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D9F69D4E29E02B82004557F5 /* StyleCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B1DCA1E29D83879007A412A /* LocationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationViewController.xib; sourceTree = "<group>"; };
 		0B389FF029DDB6900008C01B /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		0B41C49229E6350A0094D25F /* LapLenhVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LapLenhVC.swift; sourceTree = "<group>"; };
+		0B41C49329E6350A0094D25F /* LapLenhVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LapLenhVC.xib; sourceTree = "<group>"; };
 		0B4AE8E029D4BF1C00E8760E /* SettingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		0B4AE8E929D4D17100E8760E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0B4AE92129D4EBB700E8760E /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CharacterViewController.swift; path = RickAndMorty/Controllers/CharacterController/CharacterViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -72,6 +75,7 @@
 		0B5C6C4929D52EEC00134416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0B5C6C4B29D52EEC00134416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0B815DB929D99C7F006D434B /* RMLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMLocation.swift; sourceTree = "<group>"; };
+		0BB86D3B29E1D58E005739DD /* ExArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExArray.swift; sourceTree = "<group>"; };
 		0BC072A829E0720B0008196D /* TypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
 		0BC072A929E0720B0008196D /* TypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeCell.xib; sourceTree = "<group>"; };
 		0BF20FFC29D7BB080085F0FE /* RMCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMCharacter.swift; sourceTree = "<group>"; };
@@ -95,8 +99,6 @@
 		D9E1713B29DAE4FE00131CD9 /* EpisodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeViewController.swift; sourceTree = "<group>"; };
 		D9E1713C29DAE4FE00131CD9 /* EpisodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeViewController.xib; sourceTree = "<group>"; };
 		D9E1713F29DAE57600131CD9 /* RMEpisode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RMEpisode.swift; sourceTree = "<group>"; };
-		D9F69D4D29E02B82004557F5 /* StyleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleCell.swift; sourceTree = "<group>"; };
-		D9F69D4E29E02B82004557F5 /* StyleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StyleCell.xib; sourceTree = "<group>"; };
 		E57DA10C1B7F4173180625DD /* Pods_RickAndMorty.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RickAndMorty.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -149,8 +151,6 @@
 			children = (
 				0B4AE92129D4EBB700E8760E /* CharacterViewController.swift */,
 				0B4AE92529D4EC0000E8760E /* CharacterCollectionViewCell.swift */,
-				D9F69D4D29E02B82004557F5 /* StyleCell.swift */,
-				D9F69D4E29E02B82004557F5 /* StyleCell.xib */,
 			);
 			path = CharacterController;
 			sourceTree = "<group>";
@@ -220,6 +220,8 @@
 				0B4AE8E329D4C04600E8760E /* Character */,
 				0B4AE8E029D4BF1C00E8760E /* SettingViewController.xib */,
 				D9D2169629DD218C00BE27A8 /* LoadingScreen.swift */,
+				0B41C49229E6350A0094D25F /* LapLenhVC.swift */,
+				0B41C49329E6350A0094D25F /* LapLenhVC.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -260,6 +262,7 @@
 				0BF2104029D82B9C0085F0FE /* UIImageViewExtension.swift */,
 				0BF946F329D9267800B29068 /* Helper.swift */,
 				0B50BBB529DC8B1A000BA9D3 /* Constants.swift */,
+				0BB86D3B29E1D58E005739DD /* ExArray.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -368,8 +371,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B41C49529E6350A0094D25F /* LapLenhVC.xib in Resources */,
 				0B4AE92429D4EBB700E8760E /* CharacterViewController.xib in Resources */,
-				D9F69D5029E02B82004557F5 /* StyleCell.xib in Resources */,
 				D9E1713E29DAE4FE00131CD9 /* EpisodeViewController.xib in Resources */,
 				0B5C6C4A29D52EEC00134416 /* LaunchScreen.storyboard in Resources */,
 				D9E1713929DAD9F300131CD9 /* LocationCell.xib in Resources */,
@@ -438,10 +441,11 @@
 				0B815DBA29D99C7F006D434B /* RMLocation.swift in Sources */,
 				0BF2103629D804800085F0FE /* BaseNetworking.swift in Sources */,
 				0B4AE8EA29D4D17100E8760E /* User.swift in Sources */,
-				D9F69D4F29E02B82004557F5 /* StyleCell.swift in Sources */,
 				0B5C6C4229D52EEC00134416 /* MainViewController.swift in Sources */,
+				0B41C49429E6350A0094D25F /* LapLenhVC.swift in Sources */,
 				0B50E8EF29E08BA400382AE6 /* CharacterImageCell.swift in Sources */,
 				D9D2169729DD218C00BE27A8 /* LoadingScreen.swift in Sources */,
+				0BB86D3C29E1D58E005739DD /* ExArray.swift in Sources */,
 				0BF946F429D9267900B29068 /* Helper.swift in Sources */,
 				D92C4ABF29DFD97800C50C8A /* NewVC.swift in Sources */,
 				0B50BBB629DC8B1A000BA9D3 /* Constants.swift in Sources */,
