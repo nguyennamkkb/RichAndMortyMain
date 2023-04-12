@@ -11,7 +11,6 @@ import Kingfisher
 import DropDown
 class CharacterViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet weak var viewSearch: UIView!
-    
     var listCharacter = [RMCharacter]()
     var info = Info()
     var page: Int = 1
@@ -22,21 +21,28 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
     let dropdownType = DropDown()
     let dropDodropdownGenderwn = DropDown()
     var viewSearchHeight: Int = 0
-    
+    var filterIsExpanded: Int = 0
     @IBOutlet var collectionView: UICollectionView!
     
+    let dropDownStatus = DropDown()
+    let dropDownGender = DropDown()
+    @IBOutlet var textFieldNameSearch: UITextField!
+    
+    @IBOutlet var viewNav: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         viewSearchHeight = Int(viewSearch.frame.size.height)
         LoadingScreen.shared.show()
         collectionView.delegate = self
         collectionView.dataSource = self
+        self.viewSearch.isHidden = true
         view.backgroundColor = .white
         let nib = UINib(nibName: "CharacterCollectionViewCell", bundle: .main)
         collectionView.register(nib, forCellWithReuseIdentifier: "cell")
         setLayout()
         getFirstCharacters()
         LoadingScreen.shared.hide()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -170,22 +176,66 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         }
     }
     @IBAction func selectFilter(_ sender: UIButton) {
-        let heightView: Int = Int(viewSearch.frame.size.height)
-        print(heightView)
-        let heightConstraint0 = viewSearch.heightAnchor.constraint(equalToConstant: 0)
-        let heightConstraint100 = viewSearch.heightAnchor.constraint(equalToConstant: 100)
-        if heightView == 0 {
-            heightConstraint100.isActive = true
-            heightConstraint0.isActive = false
-        }else{
-            heightConstraint100.isActive = false
-            heightConstraint0.isActive = true
+        filterIsExpanded = filterIsExpanded == 1 ? 0 : 1
+        UIView.animate(withDuration: 0.2) {
+            self.viewSearch.alpha = CGFloat(self.filterIsExpanded)
+            self.viewSearch.isHidden = (self.filterIsExpanded != 1)
         }
-        
-        print("selectFilter")
         
     }
     
+    @IBAction func bntSelectType(_ sender: UIButton) {
+        dropDownStatus.dataSource = ["alive", "dead", "unknown"]//4
+        dropDownStatus.anchorView = sender //5
+        dropDownStatus.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
+        dropDownStatus.show() //7
+        dropDownStatus.selectionAction = { [weak self] (index: Int, item: String) in //8
+             guard let _ = self else { return }
+             sender.setTitle(item, for: .normal) //9
+           }
+    }
+    
+    @IBAction func bntSelectGender(_ sender: UIButton) {
+        dropDownGender.dataSource = ["female", "male", "genderless", "unknown"]//4
+        dropDownGender.anchorView = sender //5
+        dropDownGender.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
+        dropDownGender.show() //7
+        dropDownGender.selectionAction = { [weak self] (index: Int, item: String) in //8
+             guard let _ = self else { return }
+             sender.setTitle(item, for: .normal) //9
+           }
+    }
+    
+    @IBAction func btnSearch(_ sender: UIButton) {
+        print("Search")
+        let name = textFieldNameSearch.text ?? nil
+        
+        let param = CharacterParam()
+        param.status = dropDownStatus.selectedItem ?? nil
+        param.gender = dropDownGender.selectedItem ?? nil
+        param.name = name
+        
+        let paramRequest = Helper.getParamFromDirectory(item: param.toJSON())
+        
+        print(paramRequest)
+        ServiceManager.common.getFilterCharacters(param: paramRequest){
+            (response) in
+            if response?.results != nil {
+        
+                guard let character =  Mapper<RMCharacter>().mapArray(JSONObject: response?.results) else {return}
+                self.listCharacter = character
+                self.info = response?.info ?? Info()
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            } else {
+                self.listCharacter = []
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
+    }
     
     
 }

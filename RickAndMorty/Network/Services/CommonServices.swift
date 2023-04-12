@@ -58,6 +58,28 @@ class CommonServices {
             }
         }
     }
+    func getFilterCharacters(param: String?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
+        let router = ECommonURLs.character.getPath() + (param ?? "")
+        print("router \(router)")
+        if !ServiceManager.isConnectedToInternet() {
+            completion(nil)
+        }
+        BaseNetWorking.shared.requestData(fromURl: router, method: .get, parameter: nil) { (success, result, error) in
+            if success {
+                if result != nil {
+                    if let baseResponse = Mapper<BaseResponse>().map(JSONObject: result) {
+                        completion(baseResponse)
+                    }
+                }else{
+    
+                    completion(nil)
+                }
+            } else {
+
+                completion(nil)
+            }
+        }
+    }
     func getMore(router: String?, param: CharacterParam?, completion: @escaping (_ reponse: BaseResponse?) -> Void) {
         if !ServiceManager.isConnectedToInternet() {
             completion(nil)
