@@ -27,6 +27,7 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
     let dropDownStatus = DropDown()
     let dropDownGender = DropDown()
     @IBOutlet var textFieldNameSearch: UITextField!
+    private let refreshControl = UIRefreshControl()
     
     @IBOutlet var viewNav: UIView!
     override func viewDidLoad() {
@@ -35,6 +36,12 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         LoadingScreen.shared.show()
         collectionView.delegate = self
         collectionView.dataSource = self
+        if #available(iOS 10.0, *) {
+            collectionView.refreshControl = refreshControl
+        } else {
+            collectionView.addSubview(refreshControl)
+        }
+        setRefeshControl()
         self.viewSearch.isHidden = true
         view.backgroundColor = .white
         let nib = UINib(nibName: "CharacterCollectionViewCell", bundle: .main)
@@ -43,6 +50,15 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         getFirstCharacters()
         LoadingScreen.shared.hide()
         
+        
+        
+    }
+    func setRefeshControl(){
+        refreshControl.addTarget(self, action: #selector(refreshCharacters(_:)), for: .valueChanged)
+        
+    }
+    @objc private func refreshCharacters(_ sender: Any) {
+        // Fetch Weather Data
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -108,9 +124,13 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
                 self.listCharacter = character
                 self.info = response?.info ?? Info()
                 DispatchQueue.main.async {
+                    self.refreshControl.endRefreshing()
                     self.collectionView.reloadData()
                 }
-            } else {return}
+            } else {
+                self.refreshControl.endRefreshing()
+                
+                return}
         }
     }
     func updateNext(){
@@ -190,9 +210,9 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         dropDownStatus.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
         dropDownStatus.show() //7
         dropDownStatus.selectionAction = { [weak self] (index: Int, item: String) in //8
-             guard let _ = self else { return }
-             sender.setTitle(item, for: .normal) //9
-           }
+            guard let _ = self else { return }
+            sender.setTitle(item + " ⇅", for: .normal) //9
+        }
     }
     
     @IBAction func bntSelectGender(_ sender: UIButton) {
@@ -201,9 +221,9 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         dropDownGender.bottomOffset = CGPoint(x: 0, y: sender.frame.size.height) //6
         dropDownGender.show() //7
         dropDownGender.selectionAction = { [weak self] (index: Int, item: String) in //8
-             guard let _ = self else { return }
-             sender.setTitle(item, for: .normal) //9
-           }
+            guard let _ = self else { return }
+            sender.setTitle(item + " ⇅", for: .normal) //9
+        }
     }
     
     @IBAction func btnSearch(_ sender: UIButton) {
@@ -216,12 +236,10 @@ class CharacterViewController: UIViewController, UICollectionViewDelegate, UICol
         param.name = name
         
         let paramRequest = Helper.getParamFromDirectory(item: param.toJSON())
-        
-        print(paramRequest)
         ServiceManager.common.getFilterCharacters(param: paramRequest){
             (response) in
             if response?.results != nil {
-        
+                
                 guard let character =  Mapper<RMCharacter>().mapArray(JSONObject: response?.results) else {return}
                 self.listCharacter = character
                 self.info = response?.info ?? Info()
